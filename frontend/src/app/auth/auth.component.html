@@ -1,0 +1,23 @@
+<h2 id="aut"> <em>Authentification</em></h2>
+<button mat-raised-button color="primary" *ngIf="!authStatus" 
+           (click)="connexion()" id="bot" hidden> se connecter</button>
+<button mat-raised-button color="warn" *ngIf="authStatus"
+           (click)="deconnexion()"id="bot" hidden>se deconnecter</button>
+
+<mat-card id="form">
+	<div id="legende">Connexion</div>
+	
+		<form [formGroup]="userForm" (ngSubmit)="onsubmit()">
+			<mat-form-field floatLabel="auto">
+				 <mat-label>login</mat-label>
+			     <input matInput formControlName="login">
+			</mat-form-field>
+			<mat-form-field floatLabel="auto">
+				 <mat-label>e-mail</mat-label>
+			     <input matInput formControlName="email">
+			</mat-form-field>
+			
+			<button id="send" type="submit"  mat-raised-button color="primary" [disabled]="userForm.invalid"> envoyer </button>
+
+		</form>
+</mat-card>

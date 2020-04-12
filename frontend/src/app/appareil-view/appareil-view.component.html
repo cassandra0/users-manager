@@ -1,0 +1,17 @@
+<mat-card>
+      <p> Mis a jour: {{lastUpdate  |async | date : 'short' | lowercase}}</p>
+      <h4> Mes appariels </h4>
+      <mat-list>
+        <app-appareil *ngFor="let appar of appareils; let i= index"
+                      [appareilName]="appar.name"
+                      [appareilStatus]="appar.status"
+                      [index]= "i">
+                        
+        </app-appareil>
+        
+      </mat-list>
+      <button mat-raised-button color="primary" [disabled]="!isauth"
+           (click)="onAllumer()">tout allumer</button>
+           <button mat-raised-button color="warn" [disabled]="!isauth"
+           (click)="oneteint()">tout eteint</button>
+</mat-card>

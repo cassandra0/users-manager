@@ -1,0 +1,18 @@
+<mat-toolbar color = "primary" class="navbar">
+    <button mat-icon-button> 
+      <mat-icon> apps </mat-icon>
+    </button>
+    <div> CassandraApp</div>
+
+    <div style="flex: 1"></div>
+
+    <button mat-button routerLinkActive="active" routerLink ="/">Home</button>
+    <button mat-button routerLinkActive="active" routerLink ="/auth">connexion</button>
+    <button mat-button routerLinkActive="active" routerLink ="/enregistrer">s'enregistrer</button>
+    <button mat-button routerLinkActive="active" routerLink ="/list"> user list</button>
+    
+</mat-toolbar>
+
+<div>
+    <router-outlet></router-outlet>
+</div>

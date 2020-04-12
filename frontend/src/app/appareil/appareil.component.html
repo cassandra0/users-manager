@@ -1,0 +1,14 @@
+<mat-form-field >
+	<mat-card>
+		<mat-list-item > <h4 [ngStyle]="{color: getcolor()}">appareil : {{ appareilName }} -- statut : {{ 			getstatus()}}</h4>
+		</mat-list-item>
+		<input type="text"  matInput [(ngModel)]="appareilName">
+		      <button mat-raised-button color="primary"
+           (click)="allumer()" [disabled]="appareilStatus==='allumer'">allumer</button>
+           <button mat-raised-button color="warn" 
+           (click)="eteindre()" [disabled]="appareilStatus==='eteint'">eteindre</button>
+	</mat-card>
+		
+</mat-form-field>
+
+
