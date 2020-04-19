@@ -5,6 +5,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
+import { ContentComponent } from './content/content.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppareilComponent } from './appareil/appareil.component';
 import {MatListModule, 
@@ -26,9 +27,9 @@ import { SingleAppareilComponent } from './single-appareil/single-appareil.compo
 
 
 const appRoutes:Routes = [
-    {path:'appareil', component:AppareilViewComponent},
+    //{path:'appareil', component:AppareilViewComponent},
     {path:'auth', component:AuthComponent},
-    {path:'', component:AppareilViewComponent},
+    {path:'', component:ContentComponent},
     {path:'enregistrer', component:EnregistrerComponent},
     {path:'list', component:ListComponent},
     {path:'appareil/:id',component:SingleAppareilComponent}
@@ -45,7 +46,8 @@ const appRoutes:Routes = [
     AppareilViewComponent,
     ListComponent,
     EnregistrerComponent,
-    SingleAppareilComponent
+    SingleAppareilComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
